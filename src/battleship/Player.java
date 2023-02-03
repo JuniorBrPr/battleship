@@ -1,11 +1,10 @@
 package battleship;
 
 class Player {
-    private String name;
-
+    private final String name;
     private static int players = 0;
-    private Battlefield battlefield;
-    private Ship[] ships;
+    private final Battlefield battlefield;
+    private final Ship[] ships;
 
     public Player() {
         ++players;
@@ -44,7 +43,7 @@ class Player {
         return battlefield;
     }
 
-    public void setBattlefield(String[][] field) {
+    public void setBattlefield(char[][] field) {
         this.battlefield.setField(field);
     }
 
